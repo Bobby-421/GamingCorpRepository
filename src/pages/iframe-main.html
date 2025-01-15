@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machines List</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <style>
+    .transaction-history {
+      margin-top: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+    }
+    .transaction {
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .win {
+      color: #28a745;
+    }
+    .lose {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <h2>Available Slot Machines</h2>
+  <ul id="slot-machines-list"></ul>
+
+  <div class="balance-section">
+    <h3>User Balance</h3>
+    <p id="user-balance">1000</p>
+    
+    <h4>Transaction History</h4>
+    <div class="transaction-history" id="transaction-history">
+      <!-- Transactions will be added here -->
+    </div>
+  </div>
+  <script type="module" src="./iframe-main.ts"></script>
+</body>
+</html>

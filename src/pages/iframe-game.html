@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine Game</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --success-color: #28a745;
+      --danger-color: #dc3545;
+      --background-color: #ecf0f1;
+      --card-background: #ffffff;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+    }
+
+    #slot-machine-details {
+      background-color: var(--card-background);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    #spin-button {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    #spin-button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    #spin-button:hover:not(:disabled) {
+      background-color: #2980b9;
+    }
+
+    #spin-result {
+      text-align: center;
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .win {
+      color: var(--success-color);
+      font-weight: bold;
+    }
+
+    .lose {
+      color: var(--danger-color);
+      font-weight: bold;
+    }
+
+    .error {
+      color: var(--danger-color);
+      font-style: italic;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--secondary-color);
+    }
+
+    .bet-amounts {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .bet-amount {
+      background-color: var(--background-color);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="slot-machine-details">
+    <h2>Select a Machine</h2>
+    <p>Choose a slot machine from the list to begin playing.</p>
+  </div>
+  
+  <div id="bet-controls" style="display: none;" class="bet-controls">
+    <h3>Select Bet Amount</h3>
+    <div id="bet-buttons" class="bet-buttons"></div>
+    <p class="current-bet">Current Bet: <span id="current-bet">$0</span></p>
+  </div>
+
+  <button id="spin-button" disabled>SPIN</button>
+  <div id="spin-result"></div>
+  <script type="module" src="./iframe-game.ts"></script>
+</body>
+</html>
