@@ -37,8 +37,6 @@ Node version v20.15.0
 1. To change win probabilities:
 ```typescript
 typescript:src/models/SlotMachine.ts
-startLine: 44
-endLine: 56
 ```
 
 #### Communication Flow
