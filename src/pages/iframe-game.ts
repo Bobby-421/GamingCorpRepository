@@ -90,7 +90,7 @@ function updateMachineDisplay() {
     <p><strong>Available Bets:</strong></p>
     <div class="bet-amounts">
       ${selectedMachine.betAmounts.map(amount => 
-        `<span class="bet-amount">$${amount}</span>`
+        `<span class="bet-amount">$${amount} </span>`
       ).join('')}
     </div>
   `;

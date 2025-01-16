@@ -1,6 +1,5 @@
-import { SlotMachine } from '../models/SlotMachine';
 import { BalanceService } from '../services/BalanceService';
-import { SlotMachineService } from '../services/SlotMachineService';
+import { SlotMachineService } from '../services/MockSlotMachineService';
 
 const slotMachineService = SlotMachineService.getInstance();
 
@@ -11,13 +10,6 @@ const transactionHistory = document.getElementById('transaction-history')!;
 
 updateBalanceDisplay();
 const slotMachines = await slotMachineService.fetchSlotMachines();
-
-// // Mock slot machines
-// const slotMachines = [
-//   new SlotMachine(1, 'Slot Machine A', [1, 5, 10, 20]),
-//   new SlotMachine(2, 'Slot Machine B', [2, 5, 25, 50]),
-//   new SlotMachine(3, 'Slot Machine C', [5, 10, 25, 100]),
-// ];
 
 const slotMachinesList = document.getElementById('slot-machines-list')!;
 

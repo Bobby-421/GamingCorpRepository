@@ -103,3 +103,7 @@ iframe {
 .lose {
   border-left: 4px solid var(--danger-color);
 }
+
+#spin-result{
+  color: var(--danger-color);
+}
